@@ -45,9 +45,12 @@ Kullanılabilecek kütüphanelerin dokümanları :
    * Ses dosyalarının spectrogramlarını oluşturun. Kolaylık olması için aşağıdaki fonksiyonu kullanabilirsiniz. create_spectrogram fonksiyonuna, okuduğunuz ses dosyasını gönderdiğinizde size hazırlanmış spectrogramı dönecektir.
     
     def create_spectrogram(y):
-          spec = librosa.feature.melspectrogram(y=y)
-          spec_conv = librose.amplitude_to_db(spec, ref=np.max)
-          return spec_conv
+    
+        spec = librosa.feature.melspectrogram(y=y)
+        
+        spec_conv = librose.amplitude_to_db(spec, ref=np.max)
+        
+        return spec_conv
 
    * Oluşturduğunuz spectrogramları ait olduğu sınıfın klasörüne kaydedin.
 
@@ -60,7 +63,7 @@ Kullanılabilecek kütüphanelerin dokümanları :
 
 3. Model Hazırlanması ve Eğitimi
 
-  *  Bir CNN modeli hazırlayın.
-  *  Modeli hazırlamış olduğunuz veriyi kullanarak eğitin.
-  *  Modelin performans metriklerini, loss ve accuracy grafiklerini ekrana yazdırın.
-  *  Aldığınız sonuçlara göre hyperparameter optimization yapın.
+   *  Bir CNN modeli hazırlayın.
+   *  Modeli hazırlamış olduğunuz veriyi kullanarak eğitin.
+   *  Modelin performans metriklerini, loss ve accuracy grafiklerini ekrana yazdırın.
+   *  Aldığınız sonuçlara göre hyperparameter optimization yapın.
